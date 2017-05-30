@@ -16,6 +16,8 @@ done
 
 if [[ -f /setup.py ]]; then
   python /setup.py
+else
+  print('not find setup.py')
 fi
 
 exec ${NICE} \
