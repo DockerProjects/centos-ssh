@@ -14,6 +14,10 @@ while true; do
 	[[ -e /tmp/sshd-bootstrap.lock ]] || break
 done
 
+if [[ -f /setup.py ]]; then
+  python /setup.py
+fi
+
 exec ${NICE} \
 	-n ${NICENESS} \
 	${SSHD} \
