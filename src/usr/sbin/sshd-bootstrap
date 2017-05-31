@@ -771,8 +771,8 @@ if [[ ! -d ${OPTS_SSH_USER_HOME}/.ssh ]]; then
 	EOT
 fi
 
-if [[ -f /setup.py ]]; then
-  python /setup.py
+if [[ -f /setup.sh ]]; then
+  /setup.sh
 else
   ls -al /
   echo "not find setup.py"
