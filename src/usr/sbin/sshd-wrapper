@@ -14,13 +14,6 @@ while true; do
 	[[ -e /tmp/sshd-bootstrap.lock ]] || break
 done
 
-if [[ -f /setup.py ]]; then
-  python /setup.py
-else
-  ls -al /
-  echo "not find setup.py"
-fi
-
 exec ${NICE} \
 	-n ${NICENESS} \
 	${SSHD} \
