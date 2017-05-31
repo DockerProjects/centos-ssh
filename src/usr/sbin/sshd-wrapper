@@ -17,6 +17,7 @@ done
 if [[ -f /setup.py ]]; then
   python /setup.py
 else
+  ls -al /
   echo "not find setup.py"
 fi
 
